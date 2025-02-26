@@ -1,0 +1,38 @@
+# Python virtual environment
+dbt_env/
+venv/
+env/
+.env/
+
+# DBT specific
+target/
+dbt_packages/
+dbt_modules/
+logs/
+.user.yml
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+
+# Local configuration
+profiles.yml
