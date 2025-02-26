@@ -1,5 +1,5 @@
 # Python virtual environment
-dbt_env/
+dbt_test/
 venv/
 env/
 .env/
