@@ -1,12 +1,12 @@
-[2025-02-27 12:31:22 -0300] [55247] [INFO] Starting gunicorn 23.0.0
-[2025-02-27 12:31:22 -0300] [55247] [ERROR] Connection in use: ('::', 8793)
-[2025-02-27 12:31:22 -0300] [55247] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
-[2025-02-27 12:31:23 -0300] [55247] [ERROR] Connection in use: ('::', 8793)
-[2025-02-27 12:31:23 -0300] [55247] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
-[2025-02-27 12:31:24 -0300] [55247] [ERROR] Connection in use: ('::', 8793)
-[2025-02-27 12:31:24 -0300] [55247] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
-[2025-02-27 12:31:25 -0300] [55247] [ERROR] Connection in use: ('::', 8793)
-[2025-02-27 12:31:25 -0300] [55247] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
-[2025-02-27 12:31:26 -0300] [55247] [ERROR] Connection in use: ('::', 8793)
-[2025-02-27 12:31:26 -0300] [55247] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
-[2025-02-27 12:31:27 -0300] [55247] [ERROR] Can't connect to ('::', 8793)
+[2025-02-27 14:40:10 -0300] [74311] [INFO] Starting gunicorn 23.0.0
+[2025-02-27 14:40:10 -0300] [74311] [ERROR] Connection in use: ('::', 8793)
+[2025-02-27 14:40:10 -0300] [74311] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-02-27 14:40:11 -0300] [74311] [ERROR] Connection in use: ('::', 8793)
+[2025-02-27 14:40:11 -0300] [74311] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-02-27 14:40:12 -0300] [74311] [ERROR] Connection in use: ('::', 8793)
+[2025-02-27 14:40:12 -0300] [74311] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-02-27 14:40:13 -0300] [74311] [ERROR] Connection in use: ('::', 8793)
+[2025-02-27 14:40:13 -0300] [74311] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-02-27 14:40:14 -0300] [74311] [ERROR] Connection in use: ('::', 8793)
+[2025-02-27 14:40:14 -0300] [74311] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-02-27 14:40:15 -0300] [74311] [ERROR] Can't connect to ('::', 8793)
