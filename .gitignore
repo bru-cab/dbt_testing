@@ -36,3 +36,18 @@ build/
 
 # Local configuration
 profiles.yml
+
+# Airflow specific files
+airflow/logs/
+logs/
+airflow.db
+airflow.cfg
+airflow/airflow-webserver.pid
+airflow/webserver_config.py
+.env
+connections.yaml
+variables.yaml
+airflow/airflow-scheduler.pid
+airflow/airflow-worker.pid
+standalone_admin_password.txt
+airflow/dags/serialized_dags/

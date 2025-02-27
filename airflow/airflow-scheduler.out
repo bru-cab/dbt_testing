@@ -472,3 +472,4 @@
 [2025-02-27T13:31:21.531-0300] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
 [2025-02-27T13:36:21.576-0300] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
 [2025-02-27T13:41:21.620-0300] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-02-27T13:46:21.619-0300] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
