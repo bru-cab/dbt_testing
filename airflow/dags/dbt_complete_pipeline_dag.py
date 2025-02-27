@@ -48,7 +48,7 @@ default_args = {
     'retry_delay': timedelta(minutes=1),
 }
 
-# Create the DAG with concurrency settings
+# Create the DAG
 dag = DAG(
     'dbt_complete_pipeline',
     default_args=default_args,
@@ -56,8 +56,6 @@ dag = DAG(
     schedule_interval='0 1 * * *',  # Run at 1 AM every day
     start_date=datetime(2023, 1, 1),
     catchup=False,
-    concurrency=10,  # Allow up to 10 tasks to run concurrently in this DAG
-    max_active_runs=1,  # Only one run of this DAG can be active at a time
 )
 
 # Task to clear any database locks
@@ -81,49 +79,29 @@ run_dbt_seeds = BashOperator(
     dag=dag,
 )
 
-# Tasks for staging models with explicit parallelism settings
+# Tasks for staging models
 run_stg_customers = BashOperator(
     task_id='run_stg_customers',
     bash_command='cd /Users/bruno/dbt_testing/jaffle_shop && dbt run --models staging.stg_customers',
     dag=dag,
-    pool='default_pool',
-    queue='default',
-    priority_weight=10,
-    wait_for_downstream=False,
-    depends_on_past=False,
 )
 
 run_stg_orders = BashOperator(
     task_id='run_stg_orders',
     bash_command='cd /Users/bruno/dbt_testing/jaffle_shop && dbt run --models staging.stg_orders',
     dag=dag,
-    pool='default_pool',
-    queue='default',
-    priority_weight=10,
-    wait_for_downstream=False,
-    depends_on_past=False,
 )
 
 run_stg_payments = BashOperator(
     task_id='run_stg_payments',
     bash_command='cd /Users/bruno/dbt_testing/jaffle_shop && dbt run --models staging.stg_payments',
     dag=dag,
-    pool='default_pool',
-    queue='default',
-    priority_weight=10,
-    wait_for_downstream=False,
-    depends_on_past=False,
 )
 
 run_stg_products = BashOperator(
     task_id='run_stg_products',
     bash_command='cd /Users/bruno/dbt_testing/jaffle_shop && dbt run --models staging.stg_products',
     dag=dag,
-    pool='default_pool',
-    queue='default',
-    priority_weight=10,
-    wait_for_downstream=False,
-    depends_on_past=False,
 )
 
 # Tasks for core models
@@ -156,7 +134,6 @@ run_dbt_gold_model = BashOperator(
 clear_db_locks >> run_populate_raw_orders >> run_dbt_seeds
 
 # Seeds must run before staging models
-# All staging models will run in parallel
 run_dbt_seeds >> [run_stg_customers, run_stg_orders, run_stg_payments, run_stg_products]
 
 # Staging models must complete before core models with correct dependencies
